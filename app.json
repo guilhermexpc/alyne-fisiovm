@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "physiovm-app",
+    "slug": "physiovm-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
