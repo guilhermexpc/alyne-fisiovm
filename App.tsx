@@ -3,6 +3,10 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+
+  function teste() {
+    console.log('asd')
+  }
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
