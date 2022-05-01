@@ -14,11 +14,21 @@ export default {
     primaryBg: '#161616',
     primaryTextButton: '#282828',
 
+    title: '#29292E',
+    subTitle: '#47474D',
+    cartMenu: '#F9F9F9',
+
     text_dark: '#000000',
     shape: '#FFFFFF',
 
     headerTitle: '#F4F5F6',
     header: '#246BFD',
+
+    debugs: {
+      debug01: '#CECBE0',
+      debug02: '#E9E4EC',
+      debug03: '#F8EDFF',
+    }
 
   },
   fonts: {
@@ -32,6 +42,10 @@ export default {
     title: 24,
     subTitle: 20,
     description: 16,
-    details: 14
+    details: 14,
+    CartMenu: {
+      title: 14,
+      description: 12,
+    }
   }
 };
