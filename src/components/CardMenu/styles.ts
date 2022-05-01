@@ -3,9 +3,9 @@ import { RectButton, BorderlessButton } from 'react-native-gesture-handler';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { Entypo } from '@expo/vector-icons';
 
-
 export const Container = styled.View`
   width: 49%;      
+  height: 64px;
   flex-direction: row;
   align-items: flex-start;
   
@@ -19,13 +19,18 @@ export const Container = styled.View`
 
 export const Button = styled(RectButton)`
   flex: 1;  
-  height: 100%;
-  max-height: 64px;
+  height: 100%;  
+  align-items: flex-start;
   justify-content: center;
-
 `
-export const Info = styled(BorderlessButton)`  
+export const InfoContent = styled.View`
   width: 24px;
+  height: 100%;
+  justify-content: flex-start;
+ `
+
+export const Info = styled(BorderlessButton)`  
+  width: 100%;
   height: 24px;    
   align-items: center;  
 `

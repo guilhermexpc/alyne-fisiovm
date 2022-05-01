@@ -8,6 +8,7 @@ import {
   Container,
   Button,
   Title,
+  InfoContent,
   Info,
   InfoIcon,
   DescriptionContent
@@ -32,12 +33,13 @@ export function CardMenu({ title, description, onPress, ...rest }: Props) {
         <Title>{title}</Title>
       </Button>
 
-      <Info>
-        <InfoIcon
-          name={'info-with-circle'}
-        />
-      </Info>
-
+      <InfoContent>
+        <Info>
+          <InfoIcon
+            name={'info-with-circle'}
+          />
+        </Info>
+      </InfoContent>
     </Container>
     //    <GestureHandlerRootView>
     // </GestureHandlerRootView>

@@ -14,7 +14,28 @@ export const Content = styled.View`
   flex-wrap: wrap;  
   justify-content: space-between;    
   padding: 14px 10px 0px;  
-`;
+  `;
+
+export const Item = styled.View`
+  width: 48%;
+  max-height: 64px;
+  background-color: lightgray;
+  margin-bottom: 50px;
+`
+
+export const Item2 = styled.View`
+  width: 32px;
+  height: 100%;
+  background-color: lightcyan;
+  align-items: center;
+  justify-content: center;
+`
+
+export const Item3 = styled.View`
+  width: 28px;
+  height: 28px;
+  background-color: lightgreen;
+`
 
 export const Title = styled.Text`
   font-size: ${RFValue(24)}px;
