@@ -4,22 +4,27 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   flex: 1;
   background-color: ${({ theme }) => theme.colors.background_primary};
+  
 `;
 
 export const Content = styled.View`
+  flex: 1;  
+  padding: 14px 10px 0px; 
+`;
+
+export const CardContent = styled.View`
   flex: 1;
   width: 100%;
-  
   flex-direction: row;
   flex-wrap: wrap;  
-  justify-content: space-between;    
-  padding: 14px 10px 0px;  
-  `;
+  justify-content: space-between;   
+  background-color: ${({ theme }) => theme.colors.background_secondary};
+  border-radius: 12px;
+`;
 
 export const Item = styled.View`
   width: 48%;
-  max-height: 64px;
-  background-color: lightgray;
+  max-height: 64px;  
   margin-bottom: 50px;
 `
 

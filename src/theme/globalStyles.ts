@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { StyleSheet } from 'react-native';
 
-export const styles = StyleSheet.create({
+export const globalStyles = StyleSheet.create({
   defaultShadow: {
     shadowColor: "#000",
     shadowOffset: {
@@ -12,6 +12,19 @@ export const styles = StyleSheet.create({
     shadowRadius: 4.0,
     elevation: 2,
   },
+
+  defalutContent: {
+    paddingTop: 14,
+    paddingBottom: 0,
+    paddingLeft: 10,
+    paddingRight: 10,
+  }
 })
+
+
+
+
+
+
 
 

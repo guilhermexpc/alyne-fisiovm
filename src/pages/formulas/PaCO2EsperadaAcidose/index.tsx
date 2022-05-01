@@ -2,20 +2,26 @@ import React, { useState } from 'react';
 import { Button, Text, View } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import { Header } from '../../../components/Header';
-import { Platform, StyleSheet } from 'react-native';
+import { Platform } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+
+
 
 import { PaCO2EsperadaAcidoseFormula } from '../../../calculations/formulas';
+import { FormulaScreen } from './FormulaScreen';
+import { InfoScreen } from './InfoScreen'
+
 
 import {
   Container,
-  Content,
-  InputFormula,
-  ResultContent
 } from './styles';
 
 export function PaCO2EsperadaAcidose() {
   const [HCO3, setHCO3] = useState('');
   const [result, setResult] = useState('');
+
+  const Tab = createMaterialTopTabNavigator();
 
   function Calculate(value: number) {
     console.log(PaCO2EsperadaAcidoseFormula(value));
@@ -25,31 +31,10 @@ export function PaCO2EsperadaAcidose() {
   return (
     <Container>
       <Header Title='PaCO2 Esperada Acidose' />
-      <Content>
-        <InputFormula
-          value={HCO3}
-          onChangeText={setHCO3}
-          keyboardType={Platform.OS === 'android' ? "numeric" : "number-pad"}
-
-        />
-        <Button
-          title='calcular'
-          onPress={() => { Calculate(parseFloat(HCO3)) }}
-        />
-
-        {
-          result.length > 0 &&
-          (
-            <ResultContent>
-              <Text >PaCO</Text>
-              <Text style={{ fontSize: 12, lineHeight: 27 }}>2</Text>
-              <Text> Esperada</Text>
-              <Text>{` = ${result} mmHg`}</Text>
-            </ResultContent>
-          )
-        }
-      </Content>
-
+      <Tab.Navigator>
+        <Tab.Screen name="Calculo" component={FormulaScreen} />
+        <Tab.Screen name="Info" component={InfoScreen} />
+      </Tab.Navigator>
     </Container>
   );
 }

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text, ScrollView } from 'react-native';
+import { Text, ScrollView, StyleSheet } from 'react-native';
 
 import { Header } from '../../components/Header';
-
 import { CardMenu } from '../../components/CardMenu';
 
+import { globalStyles } from '../../theme/globalStyles';
 import {
   Container,
   Content,
@@ -14,7 +14,8 @@ import {
   Description,
   Details,
   Item2,
-  Item3
+  Item3,
+  CardContent
 } from './styles';
 
 export function Home() {
@@ -23,24 +24,25 @@ export function Home() {
       <Header
         Title='Bem Vindo Alyne'
       />
-      <Content>
-        <CardMenu
-          title='Gasometria Arterial '
-          onPress={() => { }}
-        />
-        <CardMenu
-          title='PaCO2 Esperada - Acidose'
-          onPress={() => { }}
-        />
-        <CardMenu
-          title='Anion Gap'
-          onPress={() => { }}
-        />
+      <Content style={globalStyles.defalutContent}>
+        <CardContent >
+          <CardMenu
+            title='Gasometria Arterial '
+            onPress={() => { }}
+          />
+          <CardMenu
+            title='PaCO2 Esperada - Acidose'
+            onPress={() => { }}
+          />
+          <CardMenu
+            title='Anion Gap'
+            onPress={() => { }}
+          />
+        </CardContent>
       </Content>
     </Container>
   );
 }
-
 
 {/* <Item>
           <Item2>

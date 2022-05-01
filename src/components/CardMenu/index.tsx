@@ -2,7 +2,7 @@ import React from 'react';
 import { Text } from 'react-native';
 import { GestureHandlerRootView, RectButtonProps } from 'react-native-gesture-handler';
 
-import { styles } from '../../theme/globalStyles';
+import { globalStyles } from '../../theme/globalStyles';
 
 import {
   Container,
@@ -24,7 +24,7 @@ export function CardMenu({ title, description, onPress, ...rest }: Props) {
   return (
 
     <Container
-      style={styles.defaultShadow}
+      style={globalStyles.defaultShadow}
     >
       <Button
         onPress={onPress}

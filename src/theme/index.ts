@@ -5,7 +5,8 @@ export default {
     },
 
     background_primary: '#F4F5F6',
-    background_secondary: '#E5E5E5',
+    background_secondary: '#FFF',
+    background_tertiary: '#E5E5E5',
 
     primaryContrast: '#FFFFFF',
     primarySoft: '#262627',
@@ -29,7 +30,6 @@ export default {
       debug02: '#E9E4EC',
       debug03: '#F8EDFF',
     }
-
   },
   fonts: {
     title: 'Poppins_700Bold',
@@ -43,6 +43,7 @@ export default {
     subTitle: 20,
     description: 16,
     details: 14,
+
     CartMenu: {
       title: 14,
       description: 12,
