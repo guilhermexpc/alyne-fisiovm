@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
-import { TextInput } from 'react-native';
+// import { TextInput } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
+import { TextInput } from 'react-native-gesture-handler';
 
 export const Container = styled.View`
   flex: 1;  

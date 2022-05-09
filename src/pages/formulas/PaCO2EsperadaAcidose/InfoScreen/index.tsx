@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Button, Text, View } from 'react-native';
 import { Platform } from 'react-native';
 
-import { PaCO2EsperadaAcidoseFormula } from '../../../../calculations/formulas';
-
 import {
   Container,
   Content,
@@ -15,13 +13,6 @@ import {
 } from './styles';
 
 export function InfoScreen() {
-  const [HCO3, setHCO3] = useState('');
-  const [result, setResult] = useState('');
-
-  function Calculate(value: number) {
-    console.log(PaCO2EsperadaAcidoseFormula(value));
-    setResult(PaCO2EsperadaAcidoseFormula(value));
-  }
 
   return (
     <Container>
@@ -34,7 +25,6 @@ export function InfoScreen() {
             <FormulaTitle>Formula:</FormulaTitle>
             <FormulaDescription>PaCO2 = (1,5 x HCO3) + 8</FormulaDescription>
           </FormulaContent>
-
         </ContentInfo>
       </Content>
     </Container>

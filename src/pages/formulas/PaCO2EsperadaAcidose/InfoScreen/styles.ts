@@ -11,13 +11,13 @@ export const Content = styled.View`
   flex:1;
   align-items: center;  
   justify-content: center;
-  padding: 0px 10px 0px; 
+  padding: 8px 10px 0px; 
 `;
 
 export const ContentInfo = styled.View`
   flex: 1;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.background_tertiary};
+  background-color: ${({ theme }) => theme.colors.background_secondary};
 `
 
 export const InfoDescription = styled.Text`
@@ -29,7 +29,7 @@ export const InfoDescription = styled.Text`
 
 export const FormulaContent = styled.View`
   width: 100%;
-  background-color: lightgray;
+  background-color: ${({ theme }) => theme.colors.background_tertiary};
 `;
 
 export const FormulaTitle = styled.Text`

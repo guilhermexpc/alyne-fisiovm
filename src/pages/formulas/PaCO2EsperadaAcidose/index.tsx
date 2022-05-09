@@ -9,8 +9,9 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 
 
 import { PaCO2EsperadaAcidoseFormula } from '../../../calculations/formulas';
-import { FormulaScreen } from './FormulaScreen';
+import { FormulaScreen } from './FormulaScreen'
 import { InfoScreen } from './InfoScreen'
+import { TableScreen } from './TableScreen'
 
 
 import {
@@ -18,22 +19,16 @@ import {
 } from './styles';
 
 export function PaCO2EsperadaAcidose() {
-  const [HCO3, setHCO3] = useState('');
-  const [result, setResult] = useState('');
 
   const Tab = createMaterialTopTabNavigator();
-
-  function Calculate(value: number) {
-    console.log(PaCO2EsperadaAcidoseFormula(value));
-    setResult(PaCO2EsperadaAcidoseFormula(value));
-  }
 
   return (
     <Container>
       <Header Title='PaCO2 Esperada Acidose' />
       <Tab.Navigator>
-        <Tab.Screen name="Calculo" component={FormulaScreen} />
+        <Tab.Screen name="Formula" component={FormulaScreen} />
         <Tab.Screen name="Info" component={InfoScreen} />
+        <Tab.Screen name="Tabela" component={TableScreen} />
       </Tab.Navigator>
     </Container>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, ScrollView, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, TextInput } from 'react-native';
 
 import { Header } from '../../components/Header';
 import { CardMenu } from '../../components/CardMenu';
@@ -19,6 +19,8 @@ import {
 } from './styles';
 
 export function Home() {
+
+  const [text, onChangeText] = React.useState("Useless Text");
   return (
     <Container>
       <Header
@@ -43,9 +45,11 @@ export function Home() {
     </Container>
   );
 }
-
-{/* <Item>
-          <Item2>
-            <Item3 />
-          </Item2>
-        </Item> */}
+const styles = StyleSheet.create({
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  },
+});

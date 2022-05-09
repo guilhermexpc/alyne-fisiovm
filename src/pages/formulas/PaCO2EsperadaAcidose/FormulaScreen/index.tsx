@@ -25,12 +25,12 @@ export function FormulaScreen() {
     <Container>
       <Content>
         <ContentFormula>
-          <InputFormula
-            value={HCO3}
+          {/* <InputFormula
+            value='{HCO3}'
             onChangeText={setHCO3}
             keyboardType={Platform.OS === 'android' ? "numeric" : "number-pad"}
 
-          />
+          /> */}
           <Button
             title='calcular'
             onPress={() => { Calculate(parseFloat(HCO3)) }}
