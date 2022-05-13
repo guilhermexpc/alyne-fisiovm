@@ -6,8 +6,6 @@ import { Platform } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
-
-
 import { PaCO2EsperadaAcidoseFormula } from '../../../calculations/formulas';
 import { FormulaScreen } from './FormulaScreen'
 import { InfoScreen } from './InfoScreen'

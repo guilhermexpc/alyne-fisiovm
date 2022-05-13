@@ -9,13 +9,14 @@ interface props {
 export const Container = styled.View`
   flex: 1;  
   background-color: ${({ theme }) => theme.colors.background_primary};
+  
 `;
 
 export const Content = styled.View`  
   flex:1;
   align-items: center;  
   justify-content: center;
-  padding: 8px 10px 0px; 
+  padding: 8px 10px 8px; 
 `;
 
 export const TableContainer = styled.View`
@@ -39,7 +40,7 @@ export const TableValue = styled.View`
 
 
 export const TableResult = styled.View`
-  width: 25%;
+  width: 45%;
   padding: 0px 16px;
   align-items: flex-end;
   
@@ -50,6 +51,9 @@ export const TableContent2 = styled.View<props>`
   flex-direction: row;
   justify-content: space-between;
   background-color: ${(props) => props.lineIndex == 0 ? ({ theme }) => theme.colors.background_primary : ({ theme }) => theme.colors.background_secondary}; 
+  border-color: ${({ theme }) => theme.colors.background_tertiary};
+  border-bottom-width: 1px; 
+  border-right-width: 1px;
 `
 
 export const TableValue2 = styled.View`
@@ -68,7 +72,7 @@ export const TableResult2 = styled.View`
 
 export const TableDescription = styled.Text`
   font-size: ${({ theme }) => theme.fontSize.details}px;
-  font-family: ${({ theme }) => theme.fonts.description};
+  font-family: ${({ theme }) => theme.fonts.subTitle};
   color: ${({ theme }) => theme.colors.cartMenu};
   text-align: justify;
 `;
@@ -76,6 +80,5 @@ export const TableDescription = styled.Text`
 export const TableDescription2 = styled.Text`
   font-size: ${({ theme }) => theme.fontSize.details}px;
   font-family: ${({ theme }) => theme.fonts.subTitle};
-  color: ${({ theme }) => theme.colors.subTitle};
-  text-align: justify;
+  color: ${({ theme }) => theme.colors.subTitle};  
 `;
