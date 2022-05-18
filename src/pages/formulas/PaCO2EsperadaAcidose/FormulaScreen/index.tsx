@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { Button, Text, View } from 'react-native';
-import { Platform } from 'react-native';
-
+import { Button, Platform, Text } from 'react-native';
 import { PaCO2EsperadaAcidoseFormula } from '../../../../calculations/formulas';
+import { ContainerMain } from '../../../../components/ContainerMain';
 
 import {
-  Container,
   Content,
+  ContentButton,
   ContentFormula,
   InputFormula,
   ResultContent
@@ -22,34 +21,39 @@ export function FormulaScreen() {
   }
 
   return (
-    <Container>
+    <ContainerMain>
       <Content>
         <ContentFormula>
           <InputFormula
             value={HCO3}
             onChangeText={setHCO3}
-            keyboardType={Platform.OS === 'android' ? "numeric" : "number-pad"}
-
-          />
-          <Button
-            title='calcular'
-            onPress={() => { Calculate(parseFloat(HCO3)) }}
+            keyboardType={Platform.OS === 'android' ? 'numeric' : 'number-pad'}
           />
 
-          {
-            result.length > 0 &&
-            (
-              <ResultContent>
-                <Text >PaCO</Text>
+
+
+          <ResultContent>
+            {result.length > 0 && (
+              <>
+                <Text>PaCO</Text>
                 <Text style={{ fontSize: 12, lineHeight: 27 }}>2</Text>
                 <Text> Esperada</Text>
                 <Text>{` = ${result} mmHg`}</Text>
-              </ResultContent>
-            )
-          }
+              </>
+            )}
+          </ResultContent>
         </ContentFormula>
+        <ContentButton>
+          <Button
+            title="calcular"
+            onPress={() => {
+              Calculate(parseFloat(HCO3));
+            }}
+          />
+        </ContentButton>
+
       </Content>
-    </Container>
+    </ContainerMain>
   );
 }
 
@@ -57,4 +61,4 @@ export function FormulaScreen() {
   HCO3: mEq/L
   * Utiliza a Equação de Winter. Usada para avaliar a resposta compensatória na Acidose Metabólica
   * Formula: PaCO2 = (1.5 x HCO3) + 8
-*/ 
+*/

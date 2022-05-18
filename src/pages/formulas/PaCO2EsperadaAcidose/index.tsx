@@ -1,20 +1,15 @@
-import React, { useState } from 'react';
-import { Button, Text, View } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
-import { Header } from '../../../components/Header';
-import { Platform } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-
-import { PaCO2EsperadaAcidoseFormula } from '../../../calculations/formulas';
-import { FormulaScreen } from './FormulaScreen'
-import { InfoScreen } from './InfoScreen'
-import { TableScreen } from './TableScreen'
-
-
+import React from 'react';
+import { Header } from '../../../components/Header';
+import { FormulaScreen } from './FormulaScreen';
+import { InfoScreen } from './InfoScreen';
 import {
-  Container,
+  Container
 } from './styles';
+import { TableScreen } from './TableScreen';
+
+
+
 
 export function PaCO2EsperadaAcidose() {
 
